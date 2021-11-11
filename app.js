@@ -5,6 +5,8 @@ const logger = require('./log');
 const auth = require('./auth');
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 app.use(logger);
 app.use(auth);
